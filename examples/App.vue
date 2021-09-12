@@ -1,16 +1,24 @@
 <template>
-  <div>app</div>
+  <ConfigProvider>
+    <div class="routes">
+      <router-link to="/button">button</router-link>
+    </div>
+    <div class="preview">
+      <router-view />
+    </div>
+  </ConfigProvider>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import ConfigProvider from '/~/config-provider/index.vue'
+</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="less">
+  .routes {
+    padding: 20px;
+  }
+  .preview {
+    text-align: center;
+    padding: 50px;
+  }
 </style>

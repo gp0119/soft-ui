@@ -1,0 +1,52 @@
+@import "../../style/var.less";
+@import "mixins.less";
+
+@btn-prefix: ~"@{prefix}btn";
+
+.@{btn-prefix} {
+  .btn();
+  &-round {
+    .btn-round(@btn-round-size)
+  }
+  &-large {
+    .btn-size(@btn-height-lg, @btn-padding-lg, @btn-font-size-lg, @btn-border-radius);
+    &.@{btn-prefix}-round {
+      .btn-round(@btn-round-size-lg)
+    }
+  }
+  &-small {
+    .btn-size(@btn-height-sm, @btn-padding-sm, @btn-font-size-sm, @btn-border-radius-sm);
+    &.@{btn-prefix}-round {
+      .btn-round(@btn-round-size-sm)
+    }
+  }
+  &-primary {
+    .btn-color(@primary-color)
+  }
+  &-success {
+    .btn-color(@success-color)
+  }
+  &-warning {
+    .btn-color(@warning-color)
+  }
+  &-danger {
+    .btn-color(@danger-color)
+  }
+  &-info {
+    .btn-color(@info-color)
+  }
+  &-text {
+    box-shadow: none;
+    .btn-color(@text-color, transparent, transparent);
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  &-link {
+    box-shadow: none;
+    .btn-color(@primary-color, transparent, transparent);
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
