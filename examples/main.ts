@@ -5,6 +5,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
+    path: '/icon',
+    component: () => import('./demos/icon.vue'),
+  },
+  {
     path: '/button',
     component: () => import('./demos/button.vue'),
   },
