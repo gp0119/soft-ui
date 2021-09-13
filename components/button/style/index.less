@@ -5,6 +5,9 @@
 
 .@{btn-prefix} {
   .btn();
+  & > .soft-icon + span, & > span + .soft-icon{
+    margin-left: 4px;
+  }
   &-round {
     .btn-round(@btn-round-size)
   }

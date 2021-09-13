@@ -29,6 +29,20 @@
   <br />
   <Button class="mr-16" @click="handleClick">Default</Button>
   <Button class="mr-16" disabled @click="handleClick">Default</Button>
+  <br />
+  <br />
+  <Button class="mr-16" type="default" loading>Default</Button>
+  <Button class="mr-16" type="primary" loading>Primary</Button>
+  <Button class="mr-16" type="info" loading>Info</Button>
+  <Button class="mr-16" type="success" loading>Success</Button>
+  <Button class="mr-16" type="warning" loading>Warning</Button>
+  <Button class="mr-16" type="danger" loading>Danger</Button>
+  <Button class="mr-16" type="text" loading>Text</Button>
+  <Button class="mr-16" type="link" loading>Link</Button>
+  <br />
+  <br />
+  <Button class="mr-16" type="default" icon="icon-search">Default</Button>
+  <Button class="mr-16" type="primary" icon="icon-search">Primary</Button>
 </template>
 
 <script setup lang="ts">
