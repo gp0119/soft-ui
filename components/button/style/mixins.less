@@ -17,8 +17,16 @@
   .default-shadow();
   .btn-color();
   .btn-size(@btn-height-base; @btn-padding-base; @btn-font-size; @btn-border-radius);
-  &:hover {
+  &:not([disabled]):hover {
     .insert-shadow()
+  }
+  &.disabled,
+  &[disabled] {
+    cursor: @cursor-disabled;
+    box-shadow: none;
+    > * {
+      pointer-events: none;
+    }
   }
 }
 
