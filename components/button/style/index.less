@@ -16,12 +16,39 @@
     &.@{btn-prefix}-round {
       .btn-round(@btn-round-size-lg)
     }
+    &.@{btn-prefix}-square {
+      .size(@btn-square-size-lg, @btn-square-size-lg);
+      padding: 0;
+      font-size: 18px;
+    }
+    &.@{btn-prefix}-circle {
+      .size(@btn-circle-size-lg, @btn-circle-size-lg);
+      padding: 0;
+      font-size: 18px;
+      border-radius: @btn-circle-radius-lg;
+    }
   }
   &-small {
     .btn-size(@btn-height-sm, @btn-padding-sm, @btn-font-size-sm, @btn-border-radius-sm);
     &.@{btn-prefix}-round {
       .btn-round(@btn-round-size-sm)
     }
+    &.@{btn-prefix}-square {
+      .size(@btn-square-size-sm, @btn-square-size-sm);
+      padding: 0;
+    }
+    &.@{btn-prefix}-circle {
+      .size(@btn-circle-size-sm, @btn-circle-size-sm);
+      padding: 0;
+      border-radius: @btn-circle-radius-sm;
+    }
+  }
+  &-square, &-circle {
+    .size(@btn-square-size, @btn-square-size);
+    padding: 0;
+  }
+  &-circle {
+    border-radius: @btn-circle-radius;
   }
   &-primary {
     .btn-color(@primary-color)
@@ -39,17 +66,31 @@
     .btn-color(@info-color)
   }
   &-text {
-    box-shadow: none;
+    box-shadow: none!important;
     .btn-color(@text-color, transparent, transparent);
     &:hover {
       box-shadow: none;
     }
   }
   &-link {
-    box-shadow: none;
+    box-shadow: none!important;
     .btn-color(@primary-color, transparent, transparent);
     &:hover {
       box-shadow: none;
     }
+  }
+  &-long {
+    width: 100%;
+  }
+}
+
+a.@{btn-prefix} {
+  line-height: @btn-height-base - 2px;
+  text-decoration: none;
+  &-large {
+    line-height: @btn-height-lg - 2px;
+  }
+  &-small {
+    line-height: @btn-height-sm - 2px;
   }
 }
