@@ -10,7 +10,11 @@
   const colorDifference = 0.2
   const configProviderRef = ref(null)
 
-  const props = withDefaults(defineProps<{ backgroud?: string }>(), {
+  export type ConfigProviderProps = {
+    backgroud?: string
+  }
+
+  const props = withDefaults(defineProps<ConfigProviderProps>(), {
     backgroud: '#e6e7ee',
   })
   const darkColor = colorLuminance(props.backgroud, colorDifference * -1)

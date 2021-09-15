@@ -15,8 +15,10 @@
 </template>
 
 <script setup lang="ts">
-  import ConfigProvider from '/~/config-provider/index.vue'
-  import Button from '/~/button/index.vue'
+  import ConfigProvider from '../components/config-provider/config-provider.vue'
+  import Button from '../components/button/button.vue'
+
+  console.log(typeof Button)
 </script>
 
 <style lang="less">

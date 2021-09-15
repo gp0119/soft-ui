@@ -12,7 +12,7 @@
   import Icon from '../icon/index.vue'
   const pre = 'soft-btn'
 
-  type ButtonProps = {
+  export type ButtonProps = {
     type?: ButtonType
     size?: ButtonSize
     icon?: string

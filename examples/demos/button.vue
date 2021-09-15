@@ -73,7 +73,7 @@
 </template>
 
 <script setup lang="ts">
-  import Button from '/~/button/index.vue'
+  import Button from '../../components/button/button.vue'
   const handleClick = (e) => {
     console.log(e)
   }
