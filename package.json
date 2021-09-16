@@ -1,6 +1,8 @@
 {
-  "name": "soft-ui",
-  "version": "0.0.0",
+  "name": "soft-ui-design",
+  "version": "0.0.1",
+  "description": "soft-ui",
+  "author": "gp0119 <190875565@qq.com>",
   "files": ["dist"],
   "main": "./dist/soft-ui.umd.js",
   "module": "./dist/soft-ui.es.js",
