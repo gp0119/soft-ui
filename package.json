@@ -1,9 +1,20 @@
 {
   "name": "soft-ui",
   "version": "0.0.0",
+  "files": ["dist"],
+  "main": "./dist/soft-ui.umd.js",
+  "module": "./dist/soft-ui.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/soft-ui.es.js",
+      "require": "./dist/soft-ui.umd.js"
+    }
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
+    "build-bundle": "vue-tsc --noEmit && BUNDLE=true vite build",
     "serve": "vite preview",
     "prepare": "husky install"
   },
