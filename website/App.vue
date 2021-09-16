@@ -1,25 +1,20 @@
 <template>
-  <ConfigProvider>
+  <s-config-provider>
     <div class="routes">
       <router-link to="/icon">
-        <Button type="link">icon</Button>
+        <s-button type="link">icon</s-button>
       </router-link>
       <router-link to="/button">
-        <Button type="link">button</Button>
+        <s-button type="link">button</s-button>
       </router-link>
     </div>
     <div class="preview">
       <router-view />
     </div>
-  </ConfigProvider>
+  </s-config-provider>
 </template>
 
-<script setup lang="ts">
-  import ConfigProvider from '../components/config-provider/config-provider.vue'
-  import Button from '../components/button/button.vue'
-
-  console.log(typeof Button)
-</script>
+<script setup lang="ts"></script>
 
 <style lang="less">
   .routes {

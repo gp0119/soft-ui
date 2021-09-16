@@ -1,16 +1,17 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import SoftUi from '/~/index'
 import '/~/style.less'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
     path: '/icon',
-    component: () => import('./demos/icon.vue'),
+    component: () => import('./components/icon.vue'),
   },
   {
     path: '/button',
-    component: () => import('./demos/button.vue'),
+    component: () => import('./components/button.vue'),
   },
 ]
 const router = createRouter({
@@ -18,4 +19,4 @@ const router = createRouter({
   routes,
 })
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(SoftUi).use(router).mount('#app')
