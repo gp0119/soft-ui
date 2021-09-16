@@ -4,7 +4,11 @@
   "files": ["dist"],
   "main": "./dist/soft-ui.umd.js",
   "module": "./dist/soft-ui.es.js",
+  "unpkg": "dist/soft-ui.umd.js",
+  "jsdelivr": "dist/soft-ui.umd.js",
   "exports": {
+    "./dist/soft-ui.css": "./dist/soft-ui.css",
+    "./dist/soft-ui.cjs.js": "./dist/soft-ui.cjs.js",
     ".": {
       "import": "./dist/soft-ui.es.js",
       "require": "./dist/soft-ui.umd.js"
@@ -14,7 +18,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "build-bundle": "vue-tsc --noEmit && BUNDLE=true vite build",
+    "build-bundle": "vue-tsc --noEmit && BUNDLE=true vite build && mv ./dist/style.css ./dist/soft-ui.css",
     "serve": "vite preview",
     "prepare": "husky install"
   },

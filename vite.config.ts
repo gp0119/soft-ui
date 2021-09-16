@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig, LibraryFormats } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 
@@ -6,6 +6,7 @@ const bundlingConf = {
   lib: {
     entry: resolve(__dirname, 'components/index.ts'),
     name: 'SoftUI',
+    formats: ['es', 'umd', 'cjs'] as LibraryFormats[],
     fileName: (format) => `soft-ui.${format}.js`,
   },
   rollupOptions: {
@@ -39,4 +40,5 @@ export default defineConfig({
   },
   plugins: [vue()],
   build,
+  publicDir: process.env.BUNDLE ? false : 'public',
 })
