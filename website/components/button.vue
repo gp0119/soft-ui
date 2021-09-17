@@ -1,5 +1,5 @@
 <template>
-  <s-button class="mr-16" type="default"> Default </s-button>
+  <s-button class="mr-16" type="default" autofocus> Default </s-button>
   <s-button class="mr-16" type="primary">Primary</s-button>
   <s-button class="mr-16" type="info"> Info </s-button>
   <s-button class="mr-16" type="success">Success</s-button>

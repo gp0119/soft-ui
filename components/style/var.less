@@ -4,16 +4,21 @@
   --baseColor: #e6e7ee;
   --darkColor: #c4c4ca;
   --lightColor: #ffffff;
+  --primaryColor: #2d4cc8;
+  --infoColor: #2592c3;
+  --successColor: #18634b;
+  --warningColor: #b17822;
+  --dangerColor: #a91e2c;
 }
 
 @prefix: 'soft-';
 
 //color
-@primary-color: #2d4cc8;
-@info-color: #2592c3;
-@success-color: #18634b;
-@warning-color: #b17822;
-@danger-color: #a91e2c;
+@primary-color: ~'var(--primaryColor)';
+@info-color: ~'var(--infoColor)';
+@success-color: ~'var(--successColor)';
+@warning-color: ~'var(--warningColor)';
+@danger-color: ~'var(--dangerColor)';
 // base
 @font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 @code-family: Consolas, Menlo, Courier, monospace;
