@@ -10,9 +10,10 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['plugin:@typescript-eslint/recommended', 'plugin:vue/vue3-recommended'],
+  extends: ['plugin:@typescript-eslint/recommended', 'plugin:vue/vue3-recommended', 'prettier'],
 
   plugins: ['vue', '@typescript-eslint'],
+
   rules: {
     // vue
     'vue/no-v-html': 'off',
@@ -39,5 +40,6 @@ module.exports = {
     ],
     'vue/require-default-prop': 'off',
     'vue/html-closing-bracket-spacing': 'error',
+    '@typescript-eslint/consistent-type-imports': 1,
   },
 }

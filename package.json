@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "soft-ui",
   "author": "gp0119 <190875565@qq.com>",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/soft-ui.umd.js",
   "module": "./dist/soft-ui.es.js",
   "unpkg": "dist/soft-ui.umd.js",
@@ -32,6 +34,7 @@
     "@vitejs/plugin-vue": "^1.6.0",
     "@vue/compiler-sfc": "^3.2.6",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-vue": "^7.17.0",
     "husky": ">=6",
     "less": "^4.1.1",

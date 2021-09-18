@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
   import { computed, useSlots } from 'vue'
-  import { ButtonType, ButtonSize } from './types'
+  import type { ButtonType, ButtonSize } from './types'
   import Icon from '../icon/icon.vue'
   const pre = 'soft-btn'
 
