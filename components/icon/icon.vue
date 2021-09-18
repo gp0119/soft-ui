@@ -5,7 +5,7 @@
 <script setup lang="ts">
   import { computed, withDefaults } from 'vue'
 
-  type IconType = {
+  export type IconType = {
     type: string
     size?: string | number
     color?: string
