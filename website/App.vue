@@ -7,6 +7,9 @@
       <router-link to="/button">
         <s-button type="link">button</s-button>
       </router-link>
+      <router-link to="/card">
+        <s-button type="link">card</s-button>
+      </router-link>
     </div>
     <div class="preview">
       <router-view />

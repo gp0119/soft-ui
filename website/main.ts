@@ -13,6 +13,10 @@ const routes = [
     path: '/button',
     component: () => import('./components/button.vue'),
   },
+  {
+    path: '/card',
+    component: () => import('./components/card.vue'),
+  },
 ]
 const router = createRouter({
   history: createWebHistory(),
