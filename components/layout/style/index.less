@@ -1,0 +1,31 @@
+@import "../../style/var.less";
+
+@layout-prefix: ~"@{prefix}layout";
+
+.@{layout-prefix} {
+  min-height: 0;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  box-sizing: border-box;
+  &-header {
+    height: @layout-header-height;
+    padding: @layout-header-padding;
+  }
+  &-main {
+    flex: auto;
+    min-height: 0;
+  }
+  &-sider {
+    flex: 0 0 @layout-sider-width;
+    width: @layout-sider-width;
+  }
+  &-footer {
+    height: @layout-footer-height;
+    padding: @layout-footer-padding;
+    flex: 0 0 auto;
+  }
+  &-has-sider {
+    flex-direction: row;
+  }
+}

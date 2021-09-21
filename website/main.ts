@@ -17,6 +17,10 @@ const routes = [
     path: '/card',
     component: () => import('./components/card.vue'),
   },
+  {
+    path: '/layout',
+    component: () => import('./components/layout.vue'),
+  },
 ]
 const router = createRouter({
   history: createWebHistory(),

@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-  import { withDefaults, ref, onMounted } from 'vue'
+  import { ref, onMounted } from 'vue'
   import { colorLuminance } from '/~/utils/color'
   const colorDifference = 0.2
   const configProviderRef = ref(null)
