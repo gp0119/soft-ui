@@ -7,16 +7,14 @@
   const pre = 'soft-row'
 
   export type RowProps = {
-    tag: string
-    gutter: number
-    justify: 'start' | 'end' | 'center' | 'space-around' | 'space-between'
-    align: 'top' | 'middle' | 'bottom'
+    tag?: string
+    gutter?: number | string
+    justify?: 'start' | 'end' | 'center' | 'space-around' | 'space-between'
+    align?: 'top' | 'middle' | 'bottom'
   }
 
   const props = withDefaults(defineProps<RowProps>(), {
     tag: 'div',
-    justify: 'start',
-    align: 'top',
   })
   provide('SRow', { gutter: toRef(props, 'gutter') })
 

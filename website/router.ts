@@ -51,6 +51,13 @@ const routes: AppRouteRecordRaw[] = [
       title: 'layout',
     },
   },
+  {
+    path: '/grid',
+    component: () => import('./components/grid.vue'),
+    meta: {
+      title: 'grid',
+    },
+  },
 ]
 const router = createRouter({
   history: createWebHistory(),

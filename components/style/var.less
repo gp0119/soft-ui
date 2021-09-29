@@ -14,7 +14,7 @@
   --layoutSiderWidth: 200px;
 }
 
-@prefix: 'soft-';
+@prefix: soft-;
 
 //color
 @primary-color: ~'var(--primaryColor)';
@@ -72,7 +72,7 @@
 @btn-square-size-lg: @btn-height-lg;
 @btn-square-size-sm: @btn-height-sm;
 @cursor-disabled: not-allowed;
-@btn-disable-color: rgba(0,0,0,.3);
+@btn-disable-color: rgba(0, 0, 0, .3);
 
 // card
 @card-padding-base: 16px;
@@ -86,3 +86,29 @@
 @layout-footer-padding: 0 50px;
 @layout-sider-width: ~'var(--layoutSiderWidth)';
 
+//grid
+@grid-columns: 24;
+
+@screen-xs: 480px;
+@screen-xs-min: @screen-xs;
+@screen-xs-max: (@screen-xs-min - 1);
+
+@screen-sm: 576px;
+@screen-sm-min: @screen-sm;
+@screen-sm-max: (@screen-sm-min - 1);
+
+@screen-md: 768px;
+@screen-md-min: @screen-md;
+@screen-md-max: (@screen-md-min - 1);
+
+@screen-lg: 992px;
+@screen-lg-min: @screen-lg;
+@screen-lg-max: (@screen-lg-min - 1);
+
+@screen-xl: 1200px;
+@screen-xl-min: @screen-xl;
+@screen-xl-max: (@screen-xl-min - 1);
+
+@screen-xxl: 1600px;
+@screen-xxl-min: @screen-xxl;
+@screen-xxl-max: (@screen-xxl-min - 1);
