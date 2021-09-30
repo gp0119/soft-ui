@@ -24,39 +24,57 @@ const routes: AppRouteRecordRaw[] = [
     },
   },
   {
-    path: '/icon',
-    component: () => import('./components/icon.vue'),
+    path: '/basic',
+    component: () => import('./layout/content.vue'),
     meta: {
-      title: 'icon',
+      title: 'Basic 基础组件',
     },
+    children: [
+      {
+        path: 'button',
+        component: () => import('./components/button.vue'),
+        meta: {
+          title: 'button 按钮',
+        },
+      },
+      {
+        path: 'grid',
+        component: () => import('./components/grid.vue'),
+        meta: {
+          title: 'grid 布局',
+        },
+      },
+      {
+        path: 'icon',
+        component: () => import('./components/icon.vue'),
+        meta: {
+          title: 'icon 图标',
+        },
+      },
+      {
+        path: 'layout',
+        component: () => import('./components/layout.vue'),
+        meta: {
+          title: 'layout 容器',
+        },
+      },
+    ],
   },
   {
-    path: '/button',
-    component: () => import('./components/button.vue'),
+    path: '/data',
+    component: () => import('./layout/content.vue'),
     meta: {
-      title: 'button',
+      title: '数据展示',
     },
-  },
-  {
-    path: '/card',
-    component: () => import('./components/card.vue'),
-    meta: {
-      title: 'card',
-    },
-  },
-  {
-    path: '/layout',
-    component: () => import('./components/layout.vue'),
-    meta: {
-      title: 'layout',
-    },
-  },
-  {
-    path: '/grid',
-    component: () => import('./components/grid.vue'),
-    meta: {
-      title: 'grid',
-    },
+    children: [
+      {
+        path: 'card',
+        component: () => import('./components/card.vue'),
+        meta: {
+          title: 'card 卡片',
+        },
+      },
+    ],
   },
 ]
 const router = createRouter({
