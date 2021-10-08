@@ -18,6 +18,7 @@ const routes: AppRouteRecordRaw[] = [
   },
   {
     path: '/getting-started',
+    name: 'getting-started',
     component: () => import('./views/getting-started.vue'),
     meta: {
       title: '快速上手',
@@ -32,6 +33,7 @@ const routes: AppRouteRecordRaw[] = [
     children: [
       {
         path: 'button',
+        name: 'button',
         component: () => import('./components/button.vue'),
         meta: {
           title: 'button 按钮',
@@ -39,6 +41,7 @@ const routes: AppRouteRecordRaw[] = [
       },
       {
         path: 'grid',
+        name: 'grid',
         component: () => import('./components/grid.vue'),
         meta: {
           title: 'grid 布局',
@@ -46,6 +49,7 @@ const routes: AppRouteRecordRaw[] = [
       },
       {
         path: 'icon',
+        name: 'icon',
         component: () => import('./components/icon.vue'),
         meta: {
           title: 'icon 图标',
@@ -53,6 +57,7 @@ const routes: AppRouteRecordRaw[] = [
       },
       {
         path: 'layout',
+        name: 'layout',
         component: () => import('./components/layout.vue'),
         meta: {
           title: 'layout 容器',
@@ -69,6 +74,7 @@ const routes: AppRouteRecordRaw[] = [
     children: [
       {
         path: 'card',
+        name: 'card',
         component: () => import('./components/card.vue'),
         meta: {
           title: 'card 卡片',

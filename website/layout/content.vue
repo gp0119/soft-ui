@@ -1,5 +1,5 @@
 <template>
-  <div class="preview">
+  <div class="app-content">
     <router-view />
   </div>
 </template>
@@ -7,7 +7,11 @@
 <script setup lang="ts"></script>
 
 <style lang="less">
-  .preview {
-    padding: 20px;
+  .app-content {
+    min-height: calc(100vh - 60px);
+    width: 960px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 40px;
   }
 </style>

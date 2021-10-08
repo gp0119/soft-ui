@@ -1,31 +1,29 @@
 <template>
-  <div>
-    <div>{{ props.item.meta.title }}</div>
-  </div>
+  <div class="menu-item" @click="onClickItem">{{ props.item.meta.title }}</div>
 </template>
 
 <script setup lang="ts">
-  import { computed } from 'vue'
+  import { useRouter } from 'vue-router'
+  import type { AppRouteRecordRaw } from '../router'
   type MenuItemProps = {
-    item: {
-      path: string
-      meta: {
-        title: string
-      }
-    }
+    item: AppRouteRecordRaw
     baseUrl: string
   }
   const props = defineProps<MenuItemProps>()
-  console.log(props)
-
-  const resolvedPath = computed(() => {
+  const router = useRouter()
+  const onClickItem = () => {
     const { baseUrl, item } = props
-    if (/^\//.test(item.path)) {
-      return item.path
-    }
-    return `${baseUrl}/${item.path}`
-  })
-  console.log(resolvedPath)
+    if (item.children && item.children.length) return
+    router.push({
+      path: /^\//.test(item.path) ? item.path : `${baseUrl}/${item.path}`,
+    })
+  }
 </script>
 
-<style lang="less"></style>
+<style lang="less">
+  .menu-item {
+    padding: 4px 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+</style>
