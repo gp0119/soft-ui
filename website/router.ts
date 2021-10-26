@@ -25,62 +25,44 @@ const routes: AppRouteRecordRaw[] = [
     },
   },
   {
-    path: '/basic',
-    component: () => import('./layout/content.vue'),
+    path: '/button',
+    name: 'button',
+    component: () => import('./components/button.vue'),
     meta: {
-      title: 'Basic 基础组件',
+      title: 'Button 按钮',
     },
-    children: [
-      {
-        path: 'button',
-        name: 'button',
-        component: () => import('./components/button.vue'),
-        meta: {
-          title: 'button 按钮',
-        },
-      },
-      {
-        path: 'grid',
-        name: 'grid',
-        component: () => import('./components/grid.vue'),
-        meta: {
-          title: 'grid 布局',
-        },
-      },
-      {
-        path: 'icon',
-        name: 'icon',
-        component: () => import('./components/icon.vue'),
-        meta: {
-          title: 'icon 图标',
-        },
-      },
-      {
-        path: 'layout',
-        name: 'layout',
-        component: () => import('./components/layout.vue'),
-        meta: {
-          title: 'layout 容器',
-        },
-      },
-    ],
   },
   {
-    path: '/data',
-    component: () => import('./layout/content.vue'),
+    path: '/grid',
+    name: 'grid',
+    component: () => import('./components/grid.vue'),
     meta: {
-      title: '数据展示',
+      title: 'Grid 布局',
     },
-    children: [
-      {
-        path: 'card',
-        name: 'card',
-        component: () => import('./components/card.vue'),
-        meta: {
-          title: 'card 卡片',
-        },
-      },
-    ],
+  },
+  {
+    path: '/icon',
+    name: 'icon',
+    component: () => import('./components/icon.vue'),
+    meta: {
+      title: 'Icon 图标',
+    },
+  },
+  {
+    path: '/layout',
+    name: 'layout',
+    component: () => import('./components/layout.vue'),
+    meta: {
+      title: 'Layout 容器',
+    },
+  },
+  {
+    path: '/card',
+    name: 'card',
+    component: () => import('./components/card.vue'),
+    meta: {
+      title: 'Card 卡片',
+    },
   },
 ]
 const router = createRouter({

@@ -1,7 +1,7 @@
 <template>
   <div class="app-asider">
-    <div v-for="item in filterRoutes" :key="item.path" class="menu-item-wrapper">
-      <MenuItem :base-url="item.path" :item="item" class="menu-item-title" />
+    <div v-for="item in menuList" :key="item.path" class="menu-item-wrapper">
+      <MenuItem :base-url="item.path" :item="item" />
       <div v-if="item.children" class="sub-menu-item-wrapper">
         <template v-for="child in item.children" :key="child.path">
           <MenuItem :base-url="item.path" :item="child" />
@@ -12,21 +12,60 @@
 </template>
 
 <script setup lang="ts">
-  import { useRoute, useRouter } from 'vue-router'
-  import type { AppRouteRecordRaw } from '../router'
   import MenuItem from './menu-item.vue'
 
-  const routes = useRouter().options.routes as AppRouteRecordRaw[]
-  const filterRoutes = routes.filter((item) => !item.meta.hidden)
-  const route = useRoute()
-  console.log(route)
+  export type MenuItemType = {
+    path?: string
+    title: string
+  }
+
+  const menuList: {
+    path?: string
+    title: string
+    children?: MenuItemType[]
+  }[] = [
+    {
+      path: '/getting-started',
+      title: '快速上手',
+    },
+    {
+      title: 'Basic 基础组件',
+      children: [
+        {
+          path: '/button',
+          title: 'Button 按钮',
+        },
+        {
+          path: '/grid',
+          title: 'Grid 布局',
+        },
+        {
+          path: '/icon',
+          title: 'Icon 图标',
+        },
+        {
+          path: '/layout',
+          title: 'Layout 容器',
+        },
+      ],
+    },
+    {
+      title: '数据展示',
+      children: [
+        {
+          path: '/card',
+          title: 'Card 卡片',
+        },
+      ],
+    },
+  ]
 </script>
 
 <style lang="less">
   .app-asider {
     transition: width 0.28s;
-    width: calc((100% - 1376px) / 2 + 288px);
-    padding: 24px 32px 96px calc((100% - 1376px) / 2);
+    width: calc((100vw - 1376px) / 2 + 288px);
+    padding: 24px 32px 96px calc((100vw - 1376px) / 2);
     height: 100%;
     position: fixed;
     top: 60px;
@@ -36,10 +75,6 @@
     overflow: hidden;
     .menu-item-wrapper {
       padding: 0 40px;
-      .menu-item-title {
-        font-size: 16px;
-        font-weight: 440;
-      }
       .sub-menu-item-wrapper {
         padding-left: 1em;
       }
