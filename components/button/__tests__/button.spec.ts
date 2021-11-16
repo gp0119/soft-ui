@@ -72,4 +72,14 @@ describe('button.vue', () => {
     await wrapper.trigger('click')
     expect(wrapper.emitted('click')).toBeDefined()
   })
+
+  test('render text', () => {
+    const wrapper = mount(Button, {
+      props: { type: 'primary' },
+      slots: {
+        default: '按钮',
+      },
+    })
+    expect(wrapper.text()).toBe('按钮')
+  })
 })
