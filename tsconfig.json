@@ -14,8 +14,9 @@
     "lib": ["esnext", "dom"],
     "baseUrl": ".",
     "paths": {
-      "/~/*": ["components/*"],
-    }
+      "/~/*": ["components/*"]
+    },
+    "types": ["vite/client", "jest"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "exclude": ["node_modules", "**/__tests__", "dist/**"]
 }

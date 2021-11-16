@@ -27,7 +27,7 @@
     const { item } = props
     if (item.children && item.children.length) return
     router.push({
-      path: item.path,
+      path: item.path as string,
     })
   }
 </script>
