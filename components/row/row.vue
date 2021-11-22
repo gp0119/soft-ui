@@ -23,15 +23,15 @@
     return {
       [`${pre}`]: true,
       [`${pre}-justify-${justify}`]: !!justify,
-      [`${pre}-justify-${align}`]: !!align,
+      [`${pre}-align-${align}`]: !!align,
     }
   })
 
   const style = computed(() =>
     props.gutter
       ? {
-          marginLeft: `-${props.gutter}px`,
-          marginRight: `-${props.gutter}px`,
+          marginLeft: `-${Number(props.gutter) / 2}px`,
+          marginRight: `-${Number(props.gutter) / 2}px`,
         }
       : {}
   )

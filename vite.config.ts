@@ -1,4 +1,5 @@
-import { defineConfig, LibraryFormats } from 'vite'
+import type { LibraryFormats } from 'vite'
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 
@@ -41,4 +42,8 @@ export default defineConfig({
   plugins: [vue()],
   build,
   publicDir: process.env.BUNDLE ? false : 'public',
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+  },
 })

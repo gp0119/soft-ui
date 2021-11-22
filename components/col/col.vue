@@ -48,7 +48,7 @@
 
       sizeClassObj = {
         ...sizeClassObj,
-        [`${pre}-${size}-${sizeProps.span}`]: sizeProps.span !== undefined,
+        [`${pre}-${size}-span-${sizeProps.span}`]: sizeProps.span !== undefined,
         [`${pre}-${size}-order-${sizeProps.order}`]: sizeProps.order || sizeProps.order === 0,
         [`${pre}-${size}-offset-${sizeProps.offset}`]: sizeProps.offset || sizeProps.offset === 0,
         [`${pre}-${size}-push-${sizeProps.push}`]: sizeProps.push || sizeProps.push === 0,
@@ -66,7 +66,7 @@
     }
   })
   const style = computed(() => {
-    const { gutter } = inject('SRow')
+    const { gutter } = inject('SRow', { gutter: { value: 0 } })
     if (gutter.value) {
       return {
         paddingLeft: `${gutter.value / 2}px`,
