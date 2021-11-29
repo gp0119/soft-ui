@@ -1,7 +1,7 @@
 <template>
   <div class="layout-demo">
     <s-layout>
-      <s-header>header</s-header>
+      <s-header :height="200">header</s-header>
       <s-main>main</s-main>
       <s-footer>footer</s-footer>
     </s-layout>

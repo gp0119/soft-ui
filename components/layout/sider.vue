@@ -2,19 +2,24 @@
   <aside :class="classes" :style="style"><slot /></aside>
 </template>
 
-<script lang="ts">
-  export default {
-    name: 'SSider',
-  }
-</script>
 <script setup lang="ts">
-  import { computed } from 'vue'
+  import { computed, inject, onBeforeUnmount, onMounted } from 'vue'
+  import { generateId, layoutProviderKey } from './util'
 
   const pre = 'soft-layout-sider'
 
   export type SiderProps = {
-    width?: number
+    width?: number | string
   }
+  const layoutProvider = inject(layoutProviderKey, undefined)
+  const uniqueId = generateId('soft-layout-sider-')
+
+  onMounted(() => {
+    layoutProvider && layoutProvider.addSider && layoutProvider.addSider(uniqueId)
+  })
+  onBeforeUnmount(() => {
+    layoutProvider && layoutProvider.removeSider && layoutProvider.removeSider(uniqueId)
+  })
   const props = withDefaults(defineProps<SiderProps>(), {
     width: 200,
   })

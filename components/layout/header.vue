@@ -2,17 +2,12 @@
   <header :class="classes" :style="style"><slot /></header>
 </template>
 
-<script lang="ts">
-  export default {
-    name: 'SHeader',
-  }
-</script>
 <script setup lang="ts">
   import { computed } from 'vue'
 
   const pre = 'soft-layout-header'
   export type HeaderProps = {
-    height?: number
+    height?: number | string
   }
   const props = withDefaults(defineProps<HeaderProps>(), {
     height: 60,

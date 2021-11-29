@@ -2,17 +2,12 @@
   <footer :class="classes" :style="style"><slot /></footer>
 </template>
 
-<script lang="ts">
-  export default {
-    name: 'SFooter',
-  }
-</script>
 <script setup lang="ts">
   import { computed } from 'vue'
 
   const pre = 'soft-layout-footer'
   export type FooterProps = {
-    height?: number
+    height?: number | string
   }
   const props = withDefaults(defineProps<FooterProps>(), {})
   const style = computed(() =>
