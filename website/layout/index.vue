@@ -27,7 +27,6 @@
       transition: margin-left 0.28s;
       margin-left: 300px;
       position: relative;
-      overflow: auto;
     }
     .divier {
       position: relative;

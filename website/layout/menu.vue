@@ -29,19 +29,24 @@
       title: '快速上手',
     },
     {
-      title: 'Basic 基础组件',
+      title: '通用',
       children: [
         {
           path: '/button',
           title: 'Button 按钮',
         },
         {
-          path: '/grid',
-          title: 'Grid 布局',
-        },
-        {
           path: '/icon',
           title: 'Icon 图标',
+        },
+      ],
+    },
+    {
+      title: '布局',
+      children: [
+        {
+          path: '/grid',
+          title: 'Grid 布局',
         },
         {
           path: '/layout',
@@ -63,7 +68,7 @@
 
 <style lang="less">
   .app-asider {
-    height: 100%;
+    height: calc(100vh - 60px);
     position: fixed;
     top: 60px;
     bottom: 0;
