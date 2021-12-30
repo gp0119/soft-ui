@@ -8,10 +8,8 @@
 
 <style lang="less">
   .app-content {
-    min-height: calc(100vh - 60px);
-    width: 960px;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
     padding: 20px 40px;
   }
 </style>

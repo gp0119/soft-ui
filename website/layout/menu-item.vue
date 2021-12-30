@@ -34,14 +34,19 @@
 
 <style lang="less">
   .menu-item {
-    padding: 4px 10px;
+    padding: 10px 20px;
     font-size: 14px;
     font-weight: 400;
     cursor: pointer;
+    margin-bottom: 6px;
     &.active {
+      box-shadow: inset 3px 3px 6px var(--darkColor), inset -3px -3px 6px var(--lightColor);
+      border-radius: 20px;
       color: var(--primaryColor);
     }
-    &:hover {
+    &:hover:not(.title) {
+      box-shadow: inset 3px 3px 6px var(--darkColor), inset -3px -3px 6px var(--lightColor);
+      border-radius: 20px;
       color: var(--primaryColor);
     }
     &.title {

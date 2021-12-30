@@ -63,9 +63,6 @@
 
 <style lang="less">
   .app-asider {
-    transition: width 0.28s;
-    width: calc((100vw - 1376px) / 2 + 288px);
-    padding: 24px 32px 96px calc((100vw - 1376px) / 2);
     height: 100%;
     position: fixed;
     top: 60px;
@@ -73,11 +70,10 @@
     left: 0;
     z-index: 1001;
     overflow: hidden;
+    width: 300px;
+    padding: 40px 0;
     .menu-item-wrapper {
       padding: 0 40px;
-      .sub-menu-item-wrapper {
-        padding-left: 1em;
-      }
     }
   }
 </style>
