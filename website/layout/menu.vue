@@ -45,6 +45,10 @@
       title: '布局',
       children: [
         {
+          path: '/divider',
+          title: 'divider 分割线',
+        },
+        {
           path: '/grid',
           title: 'Grid 布局',
         },

@@ -1,0 +1,55 @@
+@import "../../style/var.less";
+
+@divider-prefix: ~"@{prefix}divider";
+
+.@{divider-prefix} {
+  &.@{divider-prefix}-horizontal {
+    margin: 24px 0;
+    &:before {
+      content: '';
+      display: block;
+      border-top: 1px solid var(--darkColor);
+    }
+    &:after {
+      content: '';
+      display: block;
+      border-top: 1px solid var(--lightColor);
+    }
+    &.@{divider-prefix}-dashed {
+      &:before {
+        border-top: 1px dashed var(--darkColor);
+      }
+      &:after {
+        border-top: 1px dashed var(--lightColor);
+      }
+    }
+  }
+  &.@{divider-prefix}-vertical {
+    display: inline-block;
+    margin: 0 8px;
+    &:before {
+      content: '';
+      height: 1em;
+      position: relative;
+      top: 0.1em;
+      display: inline-block;
+      border-left: 1px solid var(--darkColor);
+    }
+    &:after {
+      content: '';
+      height: 1em;
+      position: relative;
+      top: 0.1em;
+      display: inline-block;
+      border-left: 1px solid var(--lightColor);
+    }
+    &.@{divider-prefix}-dashed {
+      &:before {
+        border-left: 1px dashed var(--darkColor);
+      }
+      &:after {
+        border-left: 1px dashed var(--lightColor);
+      }
+    }
+  }
+}

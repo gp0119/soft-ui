@@ -49,6 +49,14 @@ const routes: AppRouteRecordRaw[] = [
     },
   },
   {
+    path: '/divider',
+    name: 'divider',
+    component: () => import('./components/divider.vue'),
+    meta: {
+      title: 'divider 分割线',
+    },
+  },
+  {
     path: '/layout',
     name: 'layout',
     component: () => import('./components/layout.vue'),
