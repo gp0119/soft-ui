@@ -65,6 +65,14 @@ const routes: AppRouteRecordRaw[] = [
     },
   },
   {
+    path: '/input',
+    name: 'input',
+    component: () => import('./components/input.vue'),
+    meta: {
+      title: 'Input 输入框',
+    },
+  },
+  {
     path: '/card',
     name: 'card',
     component: () => import('./components/card.vue'),

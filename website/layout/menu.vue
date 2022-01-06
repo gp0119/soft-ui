@@ -59,6 +59,15 @@
       ],
     },
     {
+      title: '数据录入',
+      children: [
+        {
+          path: '/input',
+          title: 'Input 输入框',
+        },
+      ],
+    },
+    {
       title: '数据展示',
       children: [
         {
