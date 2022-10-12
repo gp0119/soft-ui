@@ -28,16 +28,6 @@ module.exports = {
         },
       },
     ],
-    'vue/max-attributes-per-line': [
-      'error',
-      {
-        singleline: 20,
-        multiline: {
-          max: 1,
-          allowFirstLine: false,
-        },
-      },
-    ],
     'vue/require-default-prop': 'off',
     'vue/html-closing-bracket-spacing': 'error',
     '@typescript-eslint/consistent-type-imports': 1,
