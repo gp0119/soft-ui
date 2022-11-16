@@ -1,22 +1,7 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "isolatedModules": true,
-    "useDefineForClassFields": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noImplicitAny": false,
-    "strict": true,
-    "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "lib": ["esnext", "dom"],
-    "baseUrl": ".",
-    "paths": {
-      "/~/*": ["components/*"]
-    },
-    "types": ["vite/client", "jest"]
-  },
-  "exclude": ["node_modules", "**/__tests__", "dist/**"]
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.web.json" }, // 组件包部分
+    { "path": "./tsconfig.play.json" }, // 组件 play 部分
+  ]
 }

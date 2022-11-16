@@ -17,6 +17,7 @@ module.exports = {
   rules: {
     // vue
     'vue/no-v-html': 'off',
+    "vue/multi-word-component-names": "off",
     'vue/singleline-html-element-content-newline': 'off',
     'vue/html-self-closing': [
       'error',
