@@ -60,7 +60,7 @@ button:focus-visible {
   padding: 2em;
 }
 
-#app {
+#playground {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -71,11 +71,5 @@ button:focus-visible {
   :root {
     color: #213547;
     background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
   }
 }

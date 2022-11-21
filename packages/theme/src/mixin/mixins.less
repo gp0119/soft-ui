@@ -1,0 +1,21 @@
+.size(@width; @height) {
+  width: @width;
+  height: @height;
+}
+
+.default-shadow() {
+  box-shadow: 3px 3px 6px @dark-color, -3px -3px 6px @light-color;
+}
+.insert-shadow() {
+  box-shadow: inset 3px 3px 6px @dark-color, inset -3px -3px 6px @light-color;
+}
+
+.soft-load-loop{
+  animation: ani-load-loop 1s linear infinite;
+}
+
+@keyframes ani-load-loop {
+  from { transform: rotate(0deg);}
+  50%  { transform: rotate(180deg);}
+  to   { transform: rotate(360deg);}
+}
