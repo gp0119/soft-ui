@@ -17,7 +17,7 @@ module.exports = {
   rules: {
     // vue
     'vue/no-v-html': 'off',
-    "vue/multi-word-component-names": "off",
+    'vue/multi-word-component-names': 'off',
     'vue/singleline-html-element-content-newline': 'off',
     'vue/html-self-closing': [
       'error',
@@ -32,5 +32,6 @@ module.exports = {
     'vue/require-default-prop': 'off',
     'vue/html-closing-bracket-spacing': 'error',
     '@typescript-eslint/consistent-type-imports': 1,
+    '@typescript-eslint/ban-types': 'off',
   },
 }

@@ -1,5 +1,5 @@
-@import "../../style/var.less";
-@import "../../style/mixins.less";
+@import "../../../components/style/var.less";
+@import "../../../components/style/mixins.less";
 
 .btn() {
   display: inline-block;
@@ -18,7 +18,8 @@
   .btn-color();
   .btn-size(@btn-height-base; @btn-padding-base; @btn-font-size; @btn-border-radius);
   &:not([disabled]):hover {
-    .insert-shadow()
+    .insert-shadow();
+    border: 1px solid @base-color;
   }
   &.disabled,
   &[disabled] {
