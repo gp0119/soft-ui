@@ -18,7 +18,8 @@
   .btn-color();
   .btn-size(@btn-height-base; @btn-padding-base; @btn-font-size; @btn-border-radius);
   &:not([disabled]):hover {
-    .insert-shadow()
+    .insert-shadow();
+    border: 1px solid @base-color;
   }
   &.disabled,
   &[disabled] {
