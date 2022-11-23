@@ -1,6 +1,5 @@
 import type { App } from 'vue'
 import * as components from './components'
-import './style.less'
 
 export const install = (app: App): App => {
   Object.keys(components).forEach((key) => {

@@ -1,10 +1,10 @@
 import type { App } from 'vue'
-import Button from './src/button.vue'
+import Button from './src/button'
 
-export type { ButtonProps } from './src/button.vue'
+export type { buttonProps } from './src/buttonTypes'
 
 Button.install = (app: App) => {
-  app.component('SButton', Button)
+  app.component(Button.name, Button)
 }
 
 export default Button

@@ -1,6 +1,7 @@
 {
   "files": [],
   "references": [
+    { "path": "./tsconfig.base.json"},
     { "path": "./tsconfig.web.json" }, // 组件包部分
     { "path": "./tsconfig.play.json" }, // 组件 play 部分
   ]

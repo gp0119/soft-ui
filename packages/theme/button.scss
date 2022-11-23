@@ -1,0 +1,17 @@
+@use 'common/var' as *;
+@use 'mixins/function' as *;
+@use 'mixins/var' as *;
+$btn-prefix-cls: 's-btn' !default;
+
+.#{$btn-prefix-cls} {
+  @include set-component-css-var('button', $btns);
+}
+.#{$btn-prefix-cls} {
+  display: inline-block;
+  font-weight: getCssVar('btn', 'font-weight');
+  color: getCssVar('btn', 'text-default');
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid getCssVar('btn', 'border-color');
+}

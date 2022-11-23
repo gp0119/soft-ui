@@ -1,0 +1,73 @@
+@use 'sass:map';
+// color
+$white: #ffffff !default;
+$gray-100: #f3f7fa !default;
+$gray-200: #fafbfe !default;
+$gray-300: #e6e7ee !default;
+$gray-400: #d1d9e6 !default;
+$gray-500: #b1bcce !default;
+$gray-600: #93a5be !default;
+$gray-700: #66799e !default;
+$gray-800: #525480 !default;
+$gray-900: #44476a !default;
+$dark: #262833 !default;
+$black: #000000 !default;
+$blue: #0056b3 !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #a91e2c !default;
+$orange: #fd7e14 !default;
+$yellow: #f0b400 !default;
+$green: #18634b !default;
+$teal: #0056b3 !default;
+$cyan: #17a2b8 !default;
+
+$primary: $blue !default;
+$default: $dark !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+
+$theme-colors: (
+  'primary': $primary,
+  'default': $default,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+) !default;
+
+$font-size-base: 14px !default;
+$font-size-lg: $font-size-base + 2px !default;
+$font-size-sm: $font-size-base - 2px !default;
+
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
+
+$line-height-base: 1.5 !default;
+
+$body-bg: #e6e7ee !default;
+$body-color: #31344b !default;
+
+$shadow-inset: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff;
+$box-shadow-default: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
+
+// button
+$btn-font-weight: $font-weight-normal !default;
+$btn-bg-color: $body-bg !default;
+$btn-border-color: #d1d9e6 !default;
+
+$btns: () !default;
+$btns: map.merge(
+  (
+    'font-weight': $btn-font-weight,
+    'bg-color': $btn-bg-color,
+    'border-color': $btn-border-color,
+  ),
+  $btns
+);

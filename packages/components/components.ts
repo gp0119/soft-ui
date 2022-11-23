@@ -1,5 +1,5 @@
-export { default as Button } from './button'
-export { default as Card } from './card'
+export { default as SButton } from './button'
+export { default as SCard } from './card'
 export { default as Col } from './col'
 export { default as ConfigProvider } from './config-provider'
 export { default as Divider } from './divider'

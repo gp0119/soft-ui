@@ -19,15 +19,15 @@
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-vue": "^9.7.0",
-    "less": "^4.1.3",
     "prettier": "^2.7.1",
+    "sass": "^1.56.1",
     "typescript": "^4.9.3",
     "vue": "^3.2.45"
   },
   "dependencies": {
-    "@soft-ui/components": "workspace:^1.0.0",
-    "@soft-ui/theme": "workspace:^1.0.0",
-    "@soft-ui/utils": "workspace:^1.0.0"
+    "@soft-ui/components": "workspace:*",
+    "@soft-ui/theme": "workspace:*",
+    "@soft-ui/utils": "workspace:*"
   },
   "lint-staged": {
     "*.{js,ts,vue}": [
