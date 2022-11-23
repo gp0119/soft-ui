@@ -5,7 +5,7 @@ export default defineComponent({
   name: 'SButton',
   props: buttonProps,
   setup(props, { slots }) {
-    const pre = 's-btn'
+    const pre = 'soft-btn'
     const classes = computed(() => {
       return {
         [pre]: true,
@@ -14,6 +14,7 @@ export default defineComponent({
         [`${pre}-disabled`]: props.disabled,
         [`${pre}-loading`]: props.loading,
         [`${pre}-round`]: props.round,
+        [`${pre}-icon-only`]: !slots.default && slots.icon,
         [`${pre}-circle`]: props.circle,
       }
     })

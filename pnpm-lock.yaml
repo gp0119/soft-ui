@@ -4,9 +4,9 @@ importers:
 
   .:
     specifiers:
-      '@soft-ui/components': workspace:^1.0.0
-      '@soft-ui/theme': workspace:^1.0.0
-      '@soft-ui/utils': workspace:^1.0.0
+      '@soft-ui/components': workspace:*
+      '@soft-ui/theme': workspace:*
+      '@soft-ui/utils': workspace:*
       '@types/node': ^18.11.9
       '@typescript-eslint/eslint-plugin': ^5.43.0
       '@typescript-eslint/parser': ^5.43.0
@@ -40,6 +40,15 @@ importers:
     dependencies:
       vitepress: 1.0.0-alpha.29
       vue: 3.2.45
+
+  packages/components:
+    specifiers: {}
+
+  packages/theme:
+    specifiers: {}
+
+  packages/utils:
+    specifiers: {}
 
   playground:
     specifiers:

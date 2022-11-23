@@ -1,17 +1,44 @@
-@use 'common/var' as *;
-@use 'mixins/function' as *;
-@use 'mixins/var' as *;
-$btn-prefix-cls: 's-btn' !default;
+@use './mixins/function' as *;
+@use './mixins/button' as *;
+
+$btn-prefix-cls: 'soft-btn' !default;
 
 .#{$btn-prefix-cls} {
-  @include set-component-css-var('button', $btns);
-}
-.#{$btn-prefix-cls} {
   display: inline-block;
-  font-weight: getCssVar('btn', 'font-weight');
-  color: getCssVar('btn', 'text-default');
+  font-weight: getCssVar('font-weight-normal');
+  color: getCssVar('text-default');
+  letter-spacing: getCssVar('letter-spacing');
   text-align: center;
   vertical-align: middle;
   user-select: none;
-  border: 1px solid getCssVar('btn', 'border-color');
+  cursor: pointer;
+  border: 1px solid getCssVar('border-color');
+  box-shadow: getCssVar('box-shadow-default');
+  @include btn-size(
+    getCssVar('padding-y'),
+    getCssVar('padding-x'),
+    getCssVar('font-size-base'),
+    getCssVar('line-height-base'),
+    getCssVar('border-radius')
+  );
+
+  &:hover,
+  &:focus {
+    border-color: getCssVar('body-bg');
+    box-shadow: getCssVar('box-shadow-inset');
+  }
+
+  @each $type in (primary, success, info, warning, danger) {
+    &-text-#{$type} {
+      color: getCssVar('#{$type}');
+    }
+  }
+
+  &-round {
+    border-radius: getCssVar('border-radius-round');
+  }
+
+  &-circle {
+    border-radius: getCssVar('border-radius-circle');
+  }
 }
