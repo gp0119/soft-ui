@@ -14,5 +14,10 @@
   "dependencies": {
     "vitepress": "1.0.0-alpha.29",
     "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@unocss/vite": "^0.46.5",
+    "@vitejs/plugin-vue-jsx": "^2.1.1",
+    "unocss": "^0.46.5"
   }
 }

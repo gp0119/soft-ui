@@ -81,7 +81,9 @@ $font-weight-light: 300 !default;
 $font-weight-normal: 400 !default;
 $font-weight-bold: 700 !default;
 
-$line-height-base: 1.5 !default;
+$line-height-sm: 18px !default;
+$line-height-base: 22px !default;
+$line-height-lg: 26px !default;
 
 $border-radius: 8px !default;
 $border-radius-round: 32px !default;
@@ -136,28 +138,16 @@ $shadow: map.merge(
 );
 
 /* --- button  --- */
-$btn-font-weight: $font-weight-normal !default;
-$btn-bg-color: $body-bg !default;
-$btn-border-color: #d1d9e6 !default;
-$btn-font-size: $font-size-base !default;
-$btn-padding-y: 8px;
-$btn-padding-x: 14px;
-$btn-line-height: $line-height-base;
-$btn-border-radius: $border-radius;
-$btn-text-color: $body-color;
+$btn-height-sm: 32px !default;
+$btn-height: 40px !default;
+$btn-height-lg: 48px !default;
 
 $btns: () !default;
 $btns: map.merge(
   (
-    'font-weight': $btn-font-weight,
-    'bg-color': $btn-bg-color,
-    'border-color': $btn-border-color,
-    'font-size': $btn-font-size,
-    'padding-y': $btn-padding-y,
-    'padding-x': $btn-padding-x,
-    'line-height': $btn-line-height,
-    'border-radius': $btn-border-radius,
-    'text-default': $btn-text-color,
+    'height-sm': $btn-height-sm,
+    'height': $btn-height,
+    'height-lg': $btn-height-lg,
   ),
   $btns
 );

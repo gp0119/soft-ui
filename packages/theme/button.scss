@@ -1,8 +1,13 @@
 @use './mixins/function' as *;
 @use './mixins/button' as *;
 @use './mixins/var' as *;
+@use './common/var' as *;
 
 $btn-prefix-cls: 'soft-btn' !default;
+
+.#{$btn-prefix-cls} {
+  @include set-component-css-var('btn', $btns);
+}
 
 .#{$btn-prefix-cls} {
   display: inline-block;
@@ -18,7 +23,9 @@ $btn-prefix-cls: 'soft-btn' !default;
   text-decoration: none;
   border: 1px solid getCssVar('border-color');
   box-shadow: getCssVar('box-shadow-default');
+  box-sizing: border-box;
   @include btn-size(
+    getCssVar('btn', 'height'),
     getCssVar('padding-y'),
     getCssVar('padding-x'),
     getCssVar('font-size-base'),
@@ -58,6 +65,7 @@ $btn-prefix-cls: 'soft-btn' !default;
 
   &-sm {
     @include btn-size(
+      getCssVar('btn', 'height-sm'),
       getCssVar('padding-y-sm'),
       getCssVar('padding-x-sm'),
       getCssVar('font-size-sm'),
@@ -68,6 +76,7 @@ $btn-prefix-cls: 'soft-btn' !default;
 
   &-lg {
     @include btn-size(
+      getCssVar('btn', 'height-lg'),
       getCssVar('padding-y-lg'),
       getCssVar('padding-x-lg'),
       getCssVar('font-size-lg'),
@@ -93,9 +102,9 @@ $btn-prefix-cls: 'soft-btn' !default;
 
   &-icon-only {
     padding: 0;
-    width: 39px;
-    height: 39px;
-    line-height: 39px;
+    width: $btn-height;
+    height: $btn-height;
+    line-height: $btn-height;
 
     span,
     i {
