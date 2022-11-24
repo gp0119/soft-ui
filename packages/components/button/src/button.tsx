@@ -6,16 +6,19 @@ export default defineComponent({
   props: buttonProps,
   setup(props, { slots }) {
     const pre = 'soft-btn'
+
     const classes = computed(() => {
+      const { size, type, disabled, loading, round, circle } = props
+      const sizeClassNameMap = { large: 'lg', small: 'sm', default: undefined }
       return {
         [pre]: true,
-        [`${pre}-${props.size}`]: props.size,
-        [`${pre}-text-${props.type}`]: true,
-        [`${pre}-disabled`]: props.disabled,
-        [`${pre}-loading`]: props.loading,
-        [`${pre}-round`]: props.round,
+        [`${pre}-${sizeClassNameMap[size ?? 'default']}`]: size,
+        [`${pre}-text-${type}`]: true,
+        [`${pre}-disabled`]: disabled,
+        [`${pre}-loading`]: loading,
+        [`${pre}-round`]: round,
         [`${pre}-icon-only`]: !slots.default && slots.icon,
-        [`${pre}-circle`]: props.circle,
+        [`${pre}-circle`]: circle,
       }
     })
     return () => {
@@ -24,7 +27,12 @@ export default defineComponent({
         disabled,
         class: classes.value,
       }
-      const iconNode = slots.icon && !loading ? slots.icon() : <span class="soft-icon-loading"></span>
+      const iconNode =
+        slots.icon && !loading ? (
+          <div class="soft-btn-slot">{slots.icon()}</div>
+        ) : (
+          loading && <div class="soft-btn-icon-loading" />
+        )
       if (props.href !== undefined) {
         return (
           <a {...buttonProps} href={props.href} target={target}>

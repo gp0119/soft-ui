@@ -1,0 +1,7 @@
+@use './common/var' as *;
+@use './mixins/var' as *;
+:root {
+  @include set-component-css-var('', $colors);
+  @include set-component-css-var('', $base);
+  @include set-component-css-var('', $shadow);
+}

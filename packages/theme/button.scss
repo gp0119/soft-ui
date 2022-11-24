@@ -1,17 +1,21 @@
 @use './mixins/function' as *;
 @use './mixins/button' as *;
+@use './mixins/var' as *;
 
 $btn-prefix-cls: 'soft-btn' !default;
 
 .#{$btn-prefix-cls} {
   display: inline-block;
+  font-family: inherit;
   font-weight: getCssVar('font-weight-normal');
   color: getCssVar('text-default');
   letter-spacing: getCssVar('letter-spacing');
   text-align: center;
+  white-space: nowrap;
   vertical-align: middle;
   user-select: none;
   cursor: pointer;
+  text-decoration: none;
   border: 1px solid getCssVar('border-color');
   box-shadow: getCssVar('box-shadow-default');
   @include btn-size(
@@ -22,8 +26,8 @@ $btn-prefix-cls: 'soft-btn' !default;
     getCssVar('border-radius')
   );
 
-  &:hover,
-  &:focus {
+  &:not(:disabled):not(.disabled):hover,
+  &:not(:disabled):not(.disabled):focus {
     border-color: getCssVar('body-bg');
     box-shadow: getCssVar('box-shadow-inset');
   }
@@ -34,11 +38,77 @@ $btn-prefix-cls: 'soft-btn' !default;
     }
   }
 
+  &.disabled,
+  &:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+  }
+
+  &-icon-loading {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: text-bottom;
+    border: 3px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spinner-border 0.75s linear infinite;
+    margin-right: 0.5em;
+  }
+
+  &-sm {
+    @include btn-size(
+      getCssVar('padding-y-sm'),
+      getCssVar('padding-x-sm'),
+      getCssVar('font-size-sm'),
+      getCssVar('line-height-base'),
+      getCssVar('border-radius')
+    );
+  }
+
+  &-lg {
+    @include btn-size(
+      getCssVar('padding-y-lg'),
+      getCssVar('padding-x-lg'),
+      getCssVar('font-size-lg'),
+      getCssVar('line-height-base'),
+      getCssVar('border-radius')
+    );
+  }
+
   &-round {
     border-radius: getCssVar('border-radius-round');
   }
 
   &-circle {
     border-radius: getCssVar('border-radius-circle');
+  }
+
+  .#{$btn-prefix-cls}-slot {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.2em;
+    line-height: 1;
+  }
+
+  &-icon-only {
+    padding: 0;
+    width: 39px;
+    height: 39px;
+    line-height: 39px;
+
+    span,
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include translate(-50%, -50%);
+    }
+  }
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
   }
 }
