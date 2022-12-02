@@ -4,10 +4,13 @@
     <div class="flex-1 flex justify-end">
       <span>开始</span>
       <span>组件</span>
+      <Icon icon="ri:github-fill" />
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup lang="ts">
+  import { Icon } from '@iconify/vue'
+</script>
 
 <style lang="scss" scoped></style>
